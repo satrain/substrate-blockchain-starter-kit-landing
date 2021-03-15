@@ -51,11 +51,20 @@ h2 {
 }
 
 h4 {
-    /* NEED PREMIUM - font-family: Helvetica Neue; */
+    /* TODO NEED PREMIUM - font-family: Helvetica Neue; */
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
     line-height: 28px;
+}
+
+p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0.1px;
+    color: #F5F2F0;
 }
 
 .section-small-heading {
@@ -163,3 +172,141 @@ header nav ul li:not(:first-child) {
 }
 
 /* About product */
+#about_product {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background: #252525;
+}
+
+.about-product-wrapper p {
+    max-width: 682px;
+    margin-top: 28px;
+}
+
+.product-benefits-wrapper {
+    padding-top: 108px;
+    padding-bottom: 59px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-benefits-item-heading {
+    display: flex;
+    align-items: center;
+}
+
+.product-benefits-item-heading img {
+    margin-right: 20px;
+}
+
+.product-benefits-item p {
+    margin-top: 40px;
+}
+
+.product-benefits-first-item p {
+    max-width: 331px;
+}
+
+.product-benefits-second-item p {
+    max-width: 325px;
+}
+
+.product-benefits-third-item p {
+    max-width: 350px;
+}
+
+/* How it works */
+#how_it_works {
+    padding-top: 94px;
+    padding-bottom: 93px;
+    background: #1E1E1E;
+}
+
+.how-it-works-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.how-it-works-subheading {
+    max-width: 540px;
+    margin-top: 24px;
+    margin-bottom: 53px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    color: #F5F2F0;
+}
+
+.substrate-how-it-works-video {
+    width: 100%;
+    height: 444px;
+    position: relative;
+}
+
+.substrate-video-wrapper {
+    height: 100%;
+}
+
+.substrate-video-content {
+    height: 100%;
+}
+
+.substrate-video-outer {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    background: rgb(13, 13, 13);
+}
+
+.substrate-video-wrapper .substrate-video-content .substrate-video-outer video {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.substrate-how-it-works-play-btn {
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    cursor: pointer;
+}
+
+.substrate-video-outer img {
+    z-index: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.substrate-starter-kit-written-form {
+    margin-top: 24px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+}
+
+.substrate-starter-kit-written-form a {
+/* TODO GET PREMIUM FONT -> font-family: Helvetica Neue; */
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: #EB3664;
+    text-decoration: underline;
+}
