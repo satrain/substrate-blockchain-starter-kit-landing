@@ -76,6 +76,11 @@ p {
     color: #FFFFFF;
 }
 
+input {
+    outline: none;
+    border: unset;
+}
+
 header {
     position: fixed;
     width: 100%;
@@ -242,8 +247,8 @@ header nav ul li:not(:first-child) {
 }
 
 .substrate-how-it-works-video {
-    width: 100%;
-    height: 444px;
+    width: 1270px;
+    height: 690px;
     position: relative;
 }
 
@@ -260,16 +265,18 @@ header nav ul li:not(:first-child) {
     height: 100%;
     position: relative;
     overflow: hidden;
-    background: rgb(13, 13, 13);
+    background:rgb(13, 13, 13);
 }
 
-.substrate-video-wrapper .substrate-video-content .substrate-video-outer video {
+.substrate-video-wrapper .substrate-video-content .substrate-video-outer iframe {
+    width: 100%;
+    height: 100%;
     position: absolute;
     z-index: 1;
     top: 0;
-    right: 0;
     bottom: 0;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .substrate-how-it-works-play-btn {
@@ -310,3 +317,246 @@ header nav ul li:not(:first-child) {
     color: #EB3664;
     text-decoration: underline;
 }
+
+/* Resources */
+#resources {
+    padding-top: 188px;
+    padding-bottom: 120px;
+    background: #1E1E1E url('../images/resources-background-ufo.svg');
+    background-position: top 0 left 0;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+.resources-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.resources-subheading {
+    max-width: 445px;
+    margin-top: 24px;
+    margin-bottom: 34px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.1px;
+    color: #F5F2F0;
+}
+
+.resources-wrapper ul li:not(:first-child) {
+    margin-top: 40px;
+}
+
+.resources-wrapper ul li {
+    display: flex;
+    align-items: center;
+}
+
+.resources-wrapper ul li a {
+    margin-left: 16px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: #EB3664;
+}
+
+.resources-wrapper ul li img {
+    transition: .3s;
+}
+
+.resources-wrapper ul li:hover img{
+    transform: translateX(5px);
+    transition: .3s;
+}
+
+/* Created by */
+#created_by {
+    position: relative;
+    padding-top: 177px;
+    padding-bottom: 92px;
+    background: #252525;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#created_by > img {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+}
+
+.created-by-bgr-part-1 {
+    right: 0;
+}
+
+.created-by-bgr-part-2 {
+    left: 0;
+}
+
+.created-by-wrapper {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.created-by-wrapper p {
+    max-width: 540px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.created-by-wrapper > p > a {
+    text-decoration: underline;
+}
+
+.created-by-buttons-wrapper {
+    margin-top: 63px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.join-our-community-btn {
+    margin-right: 16px;
+    background: #EB3664;
+    border: 1px solid rgba(0, 101, 242, 0.12);
+    border-radius: 4px;
+    padding: 12px 22px;
+    /* TODO Helvetica Premium Font */
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+    transition: .3s;
+}
+
+.join-our-community-btn:hover {
+    transform: scale(1.05);
+    transition: .3s;
+}
+
+.contact-us-btn {
+    padding: 12px 22px;
+    border: 2px solid #EB3664;
+    background: #fff;
+    border-radius: 4px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    color: #EB3664;
+    transition: .3s;
+}
+
+.contact-us-btn:hover {
+    transform: scale(1.05);
+    transition: .3s;
+}
+
+/* Newsletter */
+#substrate-newsletter {
+    padding-top: 123px;
+    padding-bottom: 133px;
+    background: #1E1E1E;
+}
+
+.substrate-newsletter-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.substrate-newsletter-wrapper h2 {
+    max-width: 730px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 56px;
+    line-height: 60px;
+    text-align: center;
+    letter-spacing: -1px;
+    color: #FFFFFF;
+}
+
+.substrate-newsletter-wrapper .newsletter-subheading {
+    max-width: 540px;
+    margin-top: 24px;
+    margin-bottom: 68px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.substrate-newsletter-wrapper form {
+    display: flex;
+    justify-content: center;
+}
+
+.newsletter-email {
+    width: 311px;
+    height: 48px;
+    padding-left: 37px;
+    padding-right: 15px;
+    background: #9B9B9B;
+    border-radius: 100px 0px 0px 100px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    color: #FFFFFF;
+}
+
+.newsletter-email::placeholder {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    color: #FFFFFF;
+    opacity: 0.5;
+}
+
+.newsletter-submit {
+    border-radius: 4px;
+    margin-left: -5px;
+    /* TODO Helvetica Premium font */
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.1px;
+    color: #FFFFFF;
+    padding: 12px 24px;
+    background: #EB3664;
+    cursor: pointer;
+    outline: none;
+    border: unset;
+    transition: .3s;
+}
+
+.newsletter-submit:hover {
+    background: #ef5d81;
+    transition: .3s;
+}
+
+/* Footer */
