@@ -81,6 +81,30 @@ input {
     border: unset;
 }
 
+@media screen and (max-width: 768px) {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        text-align: left;
+    }
+
+    h1 {
+        font-size: 36px;
+        line-height: 50.4px;
+    }
+
+    h2 {
+        font-size: 28px;
+        line-height: 39.2px;
+    }
+
+    p {
+        text-align: left;
+    }
+}
+
 header {
     position: fixed;
     z-index: 5;
@@ -181,6 +205,18 @@ header nav ul li:hover a {
     transition: .5s;
 }
 
+@media screen and (max-width: 768px) {
+    .substrate-hero {
+        justify-content: flex-start;
+    }
+
+    .substrate-hero-content {
+        width: 80%;
+        margin: 0 auto;
+        align-items: flex-start;
+    }
+}
+
 /* About product */
 #about_product {
     padding-top: 60px;
@@ -252,8 +288,8 @@ header nav ul li:hover a {
 }
 
 .substrate-how-it-works-video {
-    width: 1270px;
-    height: 690px;
+    width: 960px;
+    height: 400px;
     position: relative;
 }
 
@@ -321,6 +357,20 @@ header nav ul li:hover a {
     text-align: center;
     color: #EB3664;
     text-decoration: underline;
+}
+
+@media (min-width: 521px) and (max-width: 1024px) {
+    .substrate-how-it-works-video {
+        width: 500px;
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .substrate-how-it-works-video {
+        width: 320px;
+        height: 180px;
+    }
 }
 
 /* Resources */
@@ -472,6 +522,18 @@ header nav ul li:hover a {
 .contact-us-btn:hover {
     transform: scale(1.05);
     transition: .3s;
+}
+
+@media screen and (max-width: 768px) {
+    #created_by > img {
+        width: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .created-by-bgr-part-2 {
+        display: none;
+    }
 }
 
 /* Newsletter */
