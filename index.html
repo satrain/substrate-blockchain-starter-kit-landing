@@ -10,7 +10,7 @@
 <body>
   <header>
     <a href=""><div class="substrate-logo"></div></a>
-    <nav>
+    <nav class="desktop-nav">
       <ul>
         <li><a href="#about_product">About Product</a></li>
         <li><a href="#how_it_works">How it works?</a></li>
@@ -19,6 +19,29 @@
         <li><a href="#substrate-newsletter">Newsletter</a></li>
       </ul>
     </nav>
+
+    <!-- Hamburger (burger) for the navigation beyond 1024px - Mobile and Tablet -->
+    <div style="display: none;" id="hamburger">
+      <div class="burger burger-squeeze">
+          <div class="burger-lines"></div>
+      </div>
+    </div>
+
+    <!-- Navigation modal -->
+    <div class="nav-modal">
+      <div class="nav-modal-content">
+        <span class="close-modal">x</span>
+        <nav>
+          <ul>
+            <li><a href="#about_product" onclick="clicked()">About Product</a></li>
+            <li><a href="#how_it_works" onclick="clicked()">How it works?</a></li>
+            <li><a href="#resources" onclick="clicked()">More Resources</a></li>
+            <li><a href="#created_by" onclick="clicked()">Created By</a></li>
+            <li><a href="#substrate-newsletter" onclick="clicked()">Newsletter</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
   </header>
 
   <!-- Hero -->

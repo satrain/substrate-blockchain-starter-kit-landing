@@ -16,3 +16,22 @@ window.addEventListener("scroll", function () {
     }
     prevScrollpos = currentScrollPos;
 })
+
+//open burger menu 
+let burger = document.querySelector("#hamburger")
+let navModal = document.querySelector(".nav-modal")
+
+let closeModal = document.querySelector(".close-modal")
+
+burger.addEventListener("click", function() {
+    navModal.style.display = "block"
+})
+
+closeModal.addEventListener("click", function() {
+    navModal.style.display = "none"
+})
+
+function clicked() {
+    navModal.style.display = "none"
+}
+

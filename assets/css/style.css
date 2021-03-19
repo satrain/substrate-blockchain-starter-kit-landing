@@ -132,16 +132,176 @@ header nav ul li:not(:first-child) {
     margin-left: 36px;
 }
 
-header nav ul li:hover a {
+header nav ul li a:hover {
     color: #FF1864;
     transition: .3s;
+}
+
+header nav ul li a:active {
+    color: #FF1864;
+}
+
+.nav-modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .8);
+}
+
+.nav-modal-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    background: rgba(13, 13, 13, .8);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 99999;
+    color: #fff;
+    font-size: 36px;
+}
+
+.nav-modal-content nav ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-modal-content nav ul li {
+    margin-bottom: 20px;
+}
+
+.nav-modal-content nav ul li a {
+    font-weight: bold;
+}
+
+.nav-modal-content nav ul li:not(:first-child) {
+    margin-left: 0;
+}
+
+/* burger style */
+.burger {
+    height: 3em;
+    width: 3em;
+    position: relative;
+    z-index: 500;
+    font-size: 12px;
+    cursor: pointer;
+    -webkit-transition: .2s all;
+    -o-transition: .2s all;
+    transition: .2s all;
+    -webkit-tap-highlight-color: transparent; 
+}
+.burger .burger-lines:after {
+    left: 0;
+    top: -1em; 
+}
+.burger .burger-lines:before {
+    left: 1em;
+    top: 1em; 
+}
+.burger:after {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 150%;
+    width: 150%;
+    top: -25%;
+    left: -25%; 
+}
+.burger .burger-lines {
+    top: 50%;
+    margin-top: -0.125em; 
+}
+.burger .burger-lines, .burger .burger-lines:after, .burger .burger-lines:before {
+    pointer-events: none;
+    display: block;
+    content: '';
+    width: 100%;
+    border-radius: 0.25em;
+    background-color: white;
+    height: 0.25em;
+    position: absolute;
+    -webkit-transform: rotate(0);
+        -ms-transform: rotate(0);
+            transform: rotate(0); 
+}
+.burger .burger-lines:after {
+    left: 0;
+    top: -1em; 
+}
+.burger .burger-lines:before {
+    left: 1em;
+    top: 1em; 
+}
+.burger.burger-squeeze .burger-lines, .burger.burger-squeeze .burger-lines:after, .burger.burger-squeeze .burger-lines:before {
+-webkit-transition: .2s top .2s, .1s left, .2s transform, .4s background-color .2s;
+    -o-transition: .2s top .2s, .1s left, .2s transform, .4s background-color .2s;
+        transition: .2s top .2s, .1s left, .2s transform, .4s background-color .2s; 
+}
+
+.burger.burger-squeeze .burger-lines:after, .burger.burger-squeeze .burger-lines:before {
+    width: 2em; 
+}
+
+.burger.burger-squeeze.open .burger-lines, .burger.burger-squeeze.open .burger-lines:after, .burger.burger-squeeze.open .burger-lines:before {
+-webkit-transition: .2s background-color, .2s top, .2s left, .2s transform .15s;
+     -o-transition: .2s background-color, .2s top, .2s left, .2s transform .15s;
+        transition: .2s background-color, .2s top, .2s left, .2s transform .15s; 
+}
+
+.burger.burger-squeeze.open .burger-lines {
+    background-color: transparent; 
+}
+
+.burger.burger-squeeze.open .burger-lines:before, .burger.burger-squeeze.open .burger-lines:after {
+    left: 0.5em;
+    top: 0px; 
+}
+
+.burger.burger-squeeze.open .burger-lines:before {
+-webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+        transform: rotate(-45deg); 
+}
+
+.burger.burger-squeeze.open .burger-lines:after {
+-webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+        transform: rotate(45deg); 
+}
+
+@media screen and (max-width: 1024px) {
+    header {
+        padding: 49px 12% 48px 12%;
+    }
+
+    .desktop-nav {
+        display: none!important;
+    }
+
+    #hamburger {
+        display: block!important;
+    }
 }
 
 /* Hero */
 /* TODO include x2 size background for better quality */
 .substrate-hero {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     padding-top: 170px;
     background: #1E1E1E url('../images/substrate-hero-background.png');
     background-size: 100%;
@@ -207,6 +367,9 @@ header nav ul li:hover a {
 
 @media screen and (max-width: 768px) {
     .substrate-hero {
+        height: 100vh;
+        padding-top: 150px;
+        padding-bottom: 70px;
         justify-content: flex-start;
     }
 
@@ -214,6 +377,25 @@ header nav ul li:hover a {
         width: 80%;
         margin: 0 auto;
         align-items: flex-start;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .substrate-hero-content .substrate-logo-icon {
+        display: none;
+    }
+
+    .hero-btn {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 385px) {
+    .hero-btn {
+        padding: 12px 10px;
     }
 }
 
@@ -259,6 +441,22 @@ header nav ul li:hover a {
 
 .product-benefits-third-item p {
     max-width: 350px;
+}
+
+@media screen and (max-width: 1280px) {
+    .product-benefits-wrapper {
+        padding-bottom: 0;
+        padding-top: 70px;
+        flex-direction: column;
+    }
+
+    .product-benefits-wrapper > div {
+        margin-bottom: 50px;
+    }
+
+    .product-benefits-item p {
+        margin-top: 20px;
+    }
 }
 
 /* How it works */
@@ -367,9 +565,32 @@ header nav ul li:hover a {
 }
 
 @media screen and (max-width: 520px) {
+    #how_it_works {
+        padding-top: 70px;
+    }
+
+    .how-it-works-wrapper {
+        align-items: flex-start;
+    }
+
+    .how-it-works-wrapper h2 {
+        text-align: left;
+    }
+
+    .how-it-works-subheading {
+        text-align: left;
+    }
+
     .substrate-how-it-works-video {
         width: 320px;
         height: 180px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .substrate-how-it-works-video {
+        width: 100%;
+        height: 150px;
     }
 }
 
@@ -431,9 +652,18 @@ header nav ul li:hover a {
     transition: .3s;
 }
 
+@media screen and (max-width: 520px) {
+    #resources {
+        padding-top: 70px;
+        padding-bottom: 70px;
+        background-position: top 0 left 165px;
+    }
+}
+
 /* Created by */
 #created_by {
     position: relative;
+    overflow: hidden;
     padding-top: 177px;
     padding-bottom: 92px;
     background: #252525;
@@ -445,6 +675,10 @@ header nav ul li:hover a {
     position: absolute;
     z-index: 0;
     top: 0;
+}
+
+#created_by > .created-by-bgr-part-2 {
+    width: 100%;
 }
 
 .created-by-bgr-part-1 {
@@ -533,6 +767,34 @@ header nav ul li:hover a {
 
     .created-by-bgr-part-2 {
         display: none;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    #created_by {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    .created-by-wrapper p {
+        text-align: left;
+    }
+
+    .created-by-buttons-wrapper {
+        width: 100%;
+        margin-top: 40px;
+        flex-direction: column;
+    }
+
+    .created-by-buttons-wrapper a {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .join-our-community-btn {
+        margin-right: 0;
+        margin-bottom: 12px;
     }
 }
 
@@ -626,6 +888,42 @@ header nav ul li:hover a {
     transition: .3s;
 }
 
+@media screen and (max-width: 520px) {
+    #substrate-newsletter {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    .substrate-newsletter-wrapper h2 {
+        font-size: 36px;
+        line-height: 48.4px;
+        text-align: left;
+    }
+
+    .substrate-newsletter-wrapper .newsletter-subheading {
+        text-align: left;
+        margin-bottom: 40px;
+    }
+
+    .substrate-newsletter-wrapper form {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .newsletter-email {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .newsletter-submit {
+        width: 100%;
+        margin-left: 0;
+        border-radius: unset;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+    }
+}
+
 /* Footer */
 footer {
     padding-top: 52px;   
@@ -692,4 +990,31 @@ footer {
 
 .copyright p a:hover {
     text-decoration: underline;
+}
+
+@media screen and (max-width: 1024px) {
+    .footer-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .substrate-footer-shortcuts {
+        margin-top: 12px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .substrate-footer-shortcuts a:not(:first-child) {
+        margin-left: 0;
+    }
+
+    .substrate-footer-shortcuts a {
+        margin-bottom: 4px;
+    }
+
+    .copyright {
+        margin-top: 20px;
+    }
 }
