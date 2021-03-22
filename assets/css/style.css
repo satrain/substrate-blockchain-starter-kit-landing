@@ -399,6 +399,18 @@ header nav ul li a:active {
     }
 }
 
+@media screen and (max-width: 331px) {
+    .substrate-hero {
+        padding-top: 100px;
+    }
+
+    .hero-btn {
+        padding-top: 25px;
+        padding-bottom: 25px;
+        font-size: 12px!important;
+    }
+}
+
 /* About product */
 #about_product {
     padding-top: 60px;
@@ -593,6 +605,7 @@ header nav ul li a:active {
         height: 150px;
     }
 }
+
 
 /* Resources */
 #resources {
